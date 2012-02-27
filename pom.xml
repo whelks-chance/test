@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <groupId>llantwit</groupId>
+    <artifactId>llantwit</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <name>Test Programs</name>
+    <url>http://www.llantwit.co.nr</url>
+
+
+    <dependencies>
+
+    </dependencies>
+    <modules>
+        <module>utils</module>
+        <module>cable</module>
+        <module>simpleserver</module>
+        <module>questcraft</module>
+        <module>threed</module>
+        <module>formulaone</module>
+        <module>blockgame</module>
+        <module>jaxbtest</module>
+        <!--<module>xslt</module>-->
+    </modules>
+</project>

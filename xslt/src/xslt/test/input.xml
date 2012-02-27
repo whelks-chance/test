@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<outer list = "lists">
+    <inner Name = "Numbers">
+        <object>
+            One
+        </object>
+        <object>
+            Two
+        </object>
+        <object>
+            Three
+        </object>
+    </inner>
+
+    <inner Name="Letters">
+        <object>
+            AAA
+        </object>
+        <object>
+            BBB
+        </object>
+        <object>
+            CCC
+        </object>
+    </inner>
+    <inner Name="Pets">
+        <object>
+            Cat
+        </object>
+        <object>
+            Dog
+        </object>
+        <object>
+            Fish
+        </object>
+        <object>
+            Rabbit
+        </object>
+    </inner>
+</outer>

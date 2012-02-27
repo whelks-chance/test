@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool>
+    <toolname>Untitled1</toolname>
+    <package/>
+    <version>0.1</version>
+    <inportnum>4</inportnum>
+    <outportnum>0</outportnum>
+    <inparam/>
+    <outparam/>
+    <input>
+        <node index="0">
+            <type>java.lang.Object</type>
+        </node>
+        <node index="1">
+            <type>java.lang.Object</type>
+        </node>
+        <node index="2">
+            <type>java.lang.Object</type>
+        </node>
+        <node index="3">
+            <type>java.lang.Object</type>
+        </node>
+    </input>
+    <parameters/>
+    <tasks>
+        <task>
+            <toolname>Concat</toolname>
+            <package>common.string</package>
+            <version>0.1</version>
+            <proxy type="Java">
+                <param paramname="unitName">
+                    <value type="java.lang.String">Concat</value>
+                </param>
+                <param paramname="unitPackage">
+                    <value type="java.lang.String">common.string</value>
+                </param>
+            </proxy>
+            <renderingHints>
+                <renderingHint hint="TaskGraphFactory" proxyDependent="true">
+                    <param paramname="factory">
+                        <value type="java.lang.String">Default</value>
+                    </param>
+                </renderingHint>
+            </renderingHints>
+            <inportnum>3</inportnum>
+            <outportnum>1</outportnum>
+            <inparam/>
+            <outparam/>
+            <input>
+                <type>java.lang.Object</type>
+            </input>
+            <output>
+                <type>java.lang.String</type>
+            </output>
+            <parameters>
+                <param name="boundary" type="userAccessible">
+                    <value type="java.lang.String"/>
+                </param>
+                <param name="guiY" type="org.trianacode.gui">
+                    <value type="java.lang.String">1.9777777777777779</value>
+                </param>
+                <param name="guiX" type="org.trianacode.gui">
+                    <value type="java.lang.String">2.651851851851852</value>
+                </param>
+                <param name="outputType0" type="unknown">
+                    <value type="java.lang.String">org.trianacode.taskgraph.databus.packet.WorkflowDataPacket</value>
+                </param>
+            </parameters>
+        </task>
+        <task>
+            <toolname>StringViewer</toolname>
+            <package>common.string</package>
+            <version>0.1</version>
+            <proxy type="Java">
+                <param paramname="unitName">
+                    <value type="java.lang.String">StringViewer</value>
+                </param>
+                <param paramname="unitPackage">
+                    <value type="java.lang.String">common.string</value>
+                </param>
+            </proxy>
+            <renderingHints>
+                <renderingHint hint="TaskGraphFactory" proxyDependent="true">
+                    <param paramname="factory">
+                        <value type="java.lang.String">Default</value>
+                    </param>
+                </renderingHint>
+            </renderingHints>
+            <inportnum>1</inportnum>
+            <outportnum>0</outportnum>
+            <inparam/>
+            <outparam/>
+            <input>
+                <type>java.lang.Object</type>
+            </input>
+            <parameters>
+                <param name="str" type="userAccessible">
+                    <value type="java.lang.String">1a2b3c4d5e aaaaaaaaaaaaaa
+</value>
+                </param>
+                <param name="append" type="userAccessible">
+                    <value type="java.lang.String">false</value>
+                </param>
+                <param name="guiY" type="org.trianacode.gui">
+                    <value type="java.lang.String">3.2444444444444445</value>
+                </param>
+                <param name="guiX" type="org.trianacode.gui">
+                    <value type="java.lang.String">4.925925925925926</value>
+                </param>
+            </parameters>
+        </task>
+        <task>
+            <toolname>Concat1</toolname>
+            <package>common.string</package>
+            <version>0.1</version>
+            <proxy type="Java">
+                <param paramname="unitName">
+                    <value type="java.lang.String">Concat</value>
+                </param>
+                <param paramname="unitPackage">
+                    <value type="java.lang.String">common.string</value>
+                </param>
+            </proxy>
+            <renderingHints>
+                <renderingHint hint="TaskGraphFactory" proxyDependent="true">
+                    <param paramname="factory">
+                        <value type="java.lang.String">Default</value>
+                    </param>
+                </renderingHint>
+            </renderingHints>
+            <inportnum>2</inportnum>
+            <outportnum>1</outportnum>
+            <inparam/>
+            <outparam/>
+            <input>
+                <type>java.lang.Object</type>
+            </input>
+            <output>
+                <type>java.lang.String</type>
+            </output>
+            <parameters>
+                <param name="boundary" type="userAccessible">
+                    <value type="java.lang.String"/>
+                </param>
+                <param name="guiY" type="org.trianacode.gui">
+                    <value type="java.lang.String">6.155555555555556</value>
+                </param>
+                <param name="guiX" type="org.trianacode.gui">
+                    <value type="java.lang.String">0.7185185185185186</value>
+                </param>
+            </parameters>
+        </task>
+        <connections>
+            <connection type="NonRunnable">
+                <source node="0" taskname="Concat1"/>
+                <target node="2" taskname="Concat"/>
+            </connection>
+            <connection type="NonRunnable">
+                <source node="0" taskname="Concat"/>
+                <target node="0" taskname="StringViewer"/>
+            </connection>
+        </connections>
+        <groupnodemapping>
+            <input>
+                <node externalnode="0" node="0" taskname="Concat"/>
+                <node externalnode="1" node="1" taskname="Concat"/>
+                <node externalnode="2" node="0" taskname="Concat1"/>
+                <node externalnode="3" node="1" taskname="Concat1"/>
+            </input>
+            <output/>
+        </groupnodemapping>
+    </tasks>
+</tool>

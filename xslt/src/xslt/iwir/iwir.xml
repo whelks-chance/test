@@ -1,0 +1,47 @@
+<IWIR version="1.0" wfname="crossProduct">
+  <parallelForEach name="foreach1">
+    <inputPorts>
+      <inputPort name="collB" type="collection/file"/>
+      <loopElements>
+        <loopElement name="collA" type="collection/file"/>
+      </loopElements>
+    </inputPorts>
+    <body>
+      <parallelForEach name="foreach2">
+        <inputPorts>
+          <inputPort name="elementA" type="file"/>
+          <loopElements>
+            <loopElement name="collB" type="collection/file"/>
+          </loopElements>
+        </inputPorts>
+        <body>
+          <task name="A" tasktype="consumer">
+            <inputPorts>
+              <inputPort name="elementA" type="file"/>
+              <inputPort name="elementB" type="file"/>
+            </inputPorts>
+            <outputPorts>
+              <outputPort name="res" type="file"/>
+            </outputPorts>
+          </task>
+        </body>
+        <outputPorts>
+          <outputPort name="res" type="collection/file"/>
+        </outputPorts>
+        <links>
+          <link from="foreach2/elementA" to="A/elementA"/>
+          <link from="foreach2/collB" to="A/elementB"/>
+          <link from="A/res" to="foreach2/res"/>
+        </links>
+      </parallelForEach>
+    </body>
+    <outputPorts>
+      <outputPort name="res" type="collection/collection/file"/>
+    </outputPorts>
+    <links>
+      <link from="foreach1/collA" to="foreach2/elementA"/>
+      <link from="foreach1/collB" to="foreach2/collB"/>
+      <link from="foreach2/res" to="foreach1/res"/>
+    </links>
+  </parallelForEach>
+</IWIR>
